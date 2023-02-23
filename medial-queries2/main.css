@@ -1,3 +1,69 @@
 body {
   background: papayawhip;
 }
+
+* {
+  border: 1px solid black;
+}
+
+.container {
+  display:flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.subcontainer {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 3; 
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 70vh;
+}
+
+body {
+  flex-grow: 1;
+  max-height: 10vh;
+  margin: .5em;
+}
+
+.subsub {
+  display: flex;
+  justify-content:space-between;
+  min-height: 20vh;
+  width: 90%;
+}
+
+.subsub > div {
+  flex-grow: 10;
+  margin: .5em;
+}
+
+main {
+  flex-grow: 3;
+  margin: .5em;
+  width: 90%;
+}
+
+@media (min-width: 600px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  header {
+    max-height:10vh;
+    width: 100%;
+  }
+  .subcontainer {
+    flex-basis:70%;
+    justify-content: stretch;
+    min-height: 80vh;
+  }
+  footer {
+    flex-grow:3;
+    min-height: 80vh;
+    margin: .5em;
+  }
+}
